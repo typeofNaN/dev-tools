@@ -1,7 +1,7 @@
 # usage
 
 ``` sh
-npm install @typeofnan-dev-tools
+npm install @typeofnan/dev-tools
 ```
 
 ``` js
