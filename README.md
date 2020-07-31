@@ -5,7 +5,7 @@ npm install @typeofnan/dev-tools
 ```
 
 ``` js
-const { arrayEqual } = require('@typeofnan-dev-tools')
+const { arrayEqual } = require('@typeofnan/dev-tools')
 
 arrayEqual(arr1, arr2)
 ```

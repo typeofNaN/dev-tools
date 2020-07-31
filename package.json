@@ -1,6 +1,6 @@
 {
   "name": "@typeofnan/dev-tools",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "tools",
   "main": "src/index.js",
   "scripts": {
