@@ -1,6 +1,6 @@
 # usage
 
-``` sh
+``` bash
 npm install @typeofnan/dev-tools
 ```
 

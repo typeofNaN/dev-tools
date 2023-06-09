@@ -1,13 +1,13 @@
 module.exports = {
   /**
-   * @desc 判断两个数组是否相等
-   * @param {Array} arr1
-   * @param {Array} arr2
-   * @return {Boolean}
+   * @description 判断两个数组是否相等
+   * @param { Array } arr1
+   * @param { Array } arr2
+   * @return { Boolean }
    */
   arrayEqual(arr1, arr2) {
     if (arr1 === arr2) return true
-    if (arr1.length != arr2.length) return false
+    if (arr1.length !== arr2.length) return false
     for (var i = 0; i < arr1.length; ++i) {
       if (arr1[i] !== arr2[i]) return false
     }
@@ -15,15 +15,15 @@ module.exports = {
   },
 
   /**
-   * @desc 根据name读取cookie
-   * @param  {String} name
-   * @return {String}
+   * @description 根据name读取cookie
+   * @param { String } name
+   * @return { String }
    */
   getCookie(name) {
     var arr = document.cookie.replace(/\s/g, "").split(';')
     for (var i = 0; i < arr.length; i++) {
       var tempArr = arr[i].split('=')
-      if (tempArr[0] == name) {
+      if (tempArr[0] === name) {
         return decodeURIComponent(tempArr[1])
       }
     }
@@ -31,10 +31,10 @@ module.exports = {
   },
 
   /**
-   * @desc  设置Cookie
-   * @param {String} name
-   * @param {String} value
-   * @param {Number} days
+   * @description  设置Cookie
+   * @param { String } name
+   * @param { String } value
+   * @param { Number } days
    */
   setCookie(name, value, days) {
     var date = new Date()
@@ -43,8 +43,8 @@ module.exports = {
   },
 
   /**
-   * @desc 获取浏览器类型和版本
-   * @return {String}
+   * @description 获取浏览器类型和版本
+   * @return { String }
    */
   getExplore() {
     var sys = {},
@@ -76,8 +76,8 @@ module.exports = {
   },
 
   /**
-   * @desc 获取操作系统类型
-   * @return {String}
+   * @description 获取操作系统类型
+   * @return { String }
    */
   getOS() {
     var userAgent = 'navigator' in window && 'userAgent' in navigator && navigator.userAgent.toLowerCase() || ''
@@ -92,16 +92,16 @@ module.exports = {
   },
 
   /**
-   * @desc 获取滚动条距顶部的距离
+   * @description 获取滚动条距顶部的距离
    */
   getScrollTop() {
     return (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop
   },
 
   /**
-   * @desc  获取一个元素的距离文档(document)的位置，类似jQ中的offset()
-   * @param {HTMLElement} ele
-   * @returns { {left: number, top: number} }
+   * @description  获取一个元素的距离文档(document)的位置，类似jQ中的offset()
+   * @param { HTMLElement } ele
+   * @returns { { left: number, top: number } }
    */
   offset(ele) {
     var pos = {
@@ -117,7 +117,7 @@ module.exports = {
   },
 
   /**
-   * @desc 设置滚动条距顶部的距离
+   * @description 设置滚动条距顶部的距离
    */
   setScrollTop(value) {
     window.scrollTo(0, value)
@@ -125,9 +125,9 @@ module.exports = {
   },
 
   /**
-   * @desc   判断`obj`是否为空
-   * @param  {Object} obj
-   * @return {Boolean}
+   * @description   判断`obj`是否为空
+   * @param  {Object } obj
+   * @return { Boolean }
    */
   isEmptyObject(obj) {
     if (!obj || typeof obj !== 'object' || Array.isArray(obj))
@@ -136,54 +136,54 @@ module.exports = {
   },
 
   /**
-   * @desc 随机生成颜色
-   * @return {String} 
+   * @description 随机生成颜色
+   * @return { String } 
    */
   randomColor() {
     return '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6)
   },
 
   /**
-   * @desc 生成指定范围随机数
-   * @param  {Number} min
-   * @param  {Number} max
-   * @return {Number}
+   * @description 生成指定范围随机数
+   * @param  {Number } min
+   * @param  {Number } max
+   * @return { Number}
    */
   randomNum(min, max) {
     return Math.floor(min + Math.random() * (max - min))
   },
 
   /**
-   * @desc   判断是否为邮箱地址
-   * @param  {String} str
-   * @return {Boolean}
+   * @description   判断是否为邮箱地址
+   * @param  {String } str
+   * @return { Boolean }
    */
   isEmail(str) {
     return /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/.test(str)
   },
 
   /**
-   * @desc  判断是否为身份证号
-   * @param  {String|Number} str
-   * @return {Boolean}
+   * @description  判断是否为身份证号
+   * @param  {String|Number } str
+   * @return { Boolean }
    */
   isIdCard(str) {
     return /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/.test(str)
   },
 
   /**
-   * @desc   判断是否为手机号
-   * @param  {String|Number} str
-   * @return {Boolean}
+   * @description   判断是否为手机号
+   * @param  {String|Number } str
+   * @return { Boolean }
    */
   isPhoneNum(str) {
     return /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/.test(str)
   },
 
   /**
-   * @desc   判断是否为URL地址
-   * @param  {String} str
-   * @return {Boolean}
+   * @description   判断是否为URL地址
+   * @param  {String } str
+   * @return { Boolean }
    */
   isUrl(str) {
     return /[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(str)
