@@ -1,22 +1,40 @@
 {
   "name": "@typeofnan/dev-tools",
-  "version": "1.0.3",
-  "description": "tools",
-  "main": "src/index.js",
+  "version": "1.0.4",
+  "description": "dev tools",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/typeofNaN/dev-tools.git"
+    "url": "https://github.com/typeofNaN/dev-tools.git"
   },
   "keywords": [
     "tools"
   ],
-  "author": "typeofNaN",
-  "license": "ISC",
+  "author": {
+    "name": "typeofNaN",
+    "url": "https://github.com/typeofNaN",
+    "email": "dmdefine6@gmail.com"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/typeofNaN/dev-tools/issues"
   },
-  "homepage": "https://github.com/typeofNaN/dev-tools#readme"
+  "homepage": "https://github.com/typeofNaN/dev-tools",
+  "files": [
+    "dist/",
+    "LICENSE",
+    "README.md"
+  ],
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0",
+    "vite-plugin-dts": "^4.5.4"
+  }
 }
