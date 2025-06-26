@@ -5,10 +5,16 @@ export default {
    * @param { Array<any> } arr2
    */
   arrayEqual(arr1: Array<any>, arr2: Array<any>) {
-    if (arr1 === arr2) return true
-    if (arr1.length !== arr2.length) return false
+    if (arr1 === arr2) {
+      return true
+    }
+    if (arr1.length !== arr2.length) {
+      return false
+    }
     for (let i = 0; i < arr1.length; ++i) {
-      if (arr1[i] !== arr2[i]) return false
+      if (arr1[i] !== arr2[i]) {
+        return false
+      }
     }
     return true
   },
@@ -63,12 +69,24 @@ export default {
                   ? sys.safari = s[1]
                   : 0
     // 根据关系进行判断
-    if (sys.ie) return ('IE: ' + sys.ie)
-    if (sys.edge) return ('EDGE: ' + sys.edge)
-    if (sys.firefox) return ('Firefox: ' + sys.firefox)
-    if (sys.chrome) return ('Chrome: ' + sys.chrome)
-    if (sys.opera) return ('Opera: ' + sys.opera)
-    if (sys.safari) return ('Safari: ' + sys.safari)
+    if (sys.ie) {
+      return ('IE: ' + sys.ie)
+    }
+    if (sys.edge) {
+      return ('EDGE: ' + sys.edge)
+    }
+    if (sys.firefox) {
+      return ('Firefox: ' + sys.firefox)
+    }
+    if (sys.chrome) {
+      return ('Chrome: ' + sys.chrome)
+    }
+    if (sys.opera) {
+      return ('Opera: ' + sys.opera)
+    }
+    if (sys.safari) {
+      return ('Safari: ' + sys.safari)
+    }
     return 'unknown'
   },
 
@@ -136,8 +154,9 @@ export default {
    * @param  { Record<string, any> } obj
    */
   isEmptyObject(obj: Record<string, any>) {
-    if (!obj || typeof obj !== 'object' || Array.isArray(obj))
+    if (!obj || typeof obj !== 'object' || Array.isArray(obj)) {
       return false
+    }
     return !Object.keys(obj).length
   },
 
@@ -159,7 +178,7 @@ export default {
 
   /**
    * @description 判断是否为邮箱地址
-   * @param  {string } str
+   * @param  { string } str
    */
   isEmail(str: string) {
     return /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/.test(str)
