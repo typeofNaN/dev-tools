@@ -1,9 +1,17 @@
 {
   "name": "@typeofnan/dev-tools",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "dev tools",
-  "main": "./dist/index.js",
+  "main": "./dist/dev-tools.cjs",
+  "module": "./dist/dev-tools.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/dev-tools.cjs",
+      "import": "./dist/dev-tools.js"
+    }
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
